@@ -1,0 +1,15 @@
+def checker(list):
+    for i in range(len(list)):
+        min = i #assuming i index is min val
+        for j in range(i,len(list)):
+            if list[j] < list[min]: #checking low val at i with the subsequent values
+                min = j #if subsequent value lower, subbing the min to that position
+
+        temp = list[i]
+        list[i] = list[min]
+        list[min] = temp
+
+
+list = [9,2,17,2,4]
+checker(list)
+print(list)
